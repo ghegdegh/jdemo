@@ -3,12 +3,12 @@ pipeline {
    stages {
        stage('Build Code') {
            steps {
-               echo "Building Artifact - Develop Branch"
+               echo "Building Artifact - Develop"
            }
        }
       stage('Deploy Code') {
           steps {
-               echo "Deploying Code - Develop Branch"
+               echo "Deploying Code - Develop"
           }
       }
    }
