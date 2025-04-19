@@ -23,7 +23,7 @@ pipeline {
                 script {
                     if (env.BRANCH_NAME == 'main') {
 						//Add your Deploy tasks/workflow here for main branch
-                        echo "Deploying for the MAIN branch..."
+                        echo "Deploying the MAIN branch..."
                     } else if (env.BRANCH_NAME == 'develop') {
 						//Add your Deploy tasks/workflow here for develop branch
                         echo "Deploying the DEVELOP branch..."
