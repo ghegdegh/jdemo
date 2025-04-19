@@ -19,17 +19,17 @@ pipeline {
         }
 
         stage('Deploy') {
-            when {
-                expression {
-                    return env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'develop'
-                }
-            }
             steps {
                 script {
-                    echo "🚀 Deploying ${env.BRANCH_NAME} branch..."
-                   // Add your deployment step
-                    echo "Deployment complete for ${env.BRANCH_NAME}"
+                    if (env.BRANCH_NAME == 'main') {
+						//Add your Deploy tasks/workflow here for main branch
+                        echo "Deploying for the MAIN branch..."
+                    } else if (env.BRANCH_NAME == 'develop') {
+						//Add your Deploy tasks/workflow here for develop branch
+                        echo "Deploying the DEVELOP branch..."
+                    }
                 }
+				
             }
         }
     }
